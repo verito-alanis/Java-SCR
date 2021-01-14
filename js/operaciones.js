@@ -7,14 +7,14 @@ function suma() {
 
 	resultado = numero01+numero02;
 
-	alert("El resultado de la suma es: "+resultado);
+	alert("El resultado de la suma es: " + resultado);
 }
 
 function signo() {
 	var numero01;
-	numero01 = Number=prompt("Insgresa un número(puede ser positivo o negativo):",);
+	numero01 = Number=prompt("Ingresa un número(puede ser positivo o negativo):",);
 	if (numero01>=0) {
-		alert("= El número ingresado es POSITIVO =",'<BR/>');
+		alert("= El número ingresado es POSITIVO =");
 	} else {
 		alert("= El número ingresado es NEGATIVO =",'<BR/>');
 	}
@@ -22,44 +22,32 @@ function signo() {
 
 function calculadora() {
 	var numero01, numero02, opcion_num, resultado;
-	document.write("Posibles a realizar:",'<BR/>');
-	document.write("1. Suma",'<BR/>');
-	document.write("2. Resta",'<BR/>');
-	document.write("3. Multiplicar",'<BR/>');
-	document.write("4. Dividir",'<BR/>');
-	document.write("�Qu� operaci�n deseas realizar? :",'<BR/>');
-	opcion_num = prompt();
+	opcion_num=Number(prompt("¿Qué operación deseas realizar?"+"Posibles a realizar: 1. Suma, 2. Resta, 3. Multiplicar, 4. Dividir"));
 	if (opcion_num==1) {
-		document.write("Igresar el primer valor",'<BR/>');
-		numero01 = Number(prompt());
-		document.write("Ingresar el segundo valor",'<BR/>');
-		numero02 = Number(prompt());
+		numero01 = Number(prompt("Ingresar el primer número: "));
+		numero02 = Number(prompt("Ingresar el segundo número: "));
+
 		resultado = numero01+numero02;
-		document.write("la suma de",numero01,"+",numero02,"=",resultado,'<BR/>');
+
+		alert("El resultado de la suma es: "+resultado,);
 	} else {
 		if (opcion_num==2) {
-			document.write("Igresar el primer valor",'<BR/>');
-			numero01 = Number(prompt());
-			document.write("Ingresar el segundo valor",'<BR/>');
-			numero02 = Number(prompt());
+			numero01 = Number(prompt("Igresar el primer valor"));
+			numero02 = Number(prompt("Ingresar el segundo valor"));
 			resultado = numero01-numero02;
-			document.write("la resta de",numero01,"-",numero02,"=",resultado,'<BR/>');
+			alert("la resta de "+numero01+" - "+numero02+" = "+resultado);
 		} else {
 			if (opcion_num==3) {
-				document.write("Igresar el primer valor",'<BR/>');
-				numero01 = Number(prompt());
-				document.write("Ingresar el segundo valor",'<BR/>');
-				numero02 = Number(prompt());
+				numero01 = Number(prompt("Igresar el primer valor"));
+				numero02 = Number(prompt("Ingresar el segundo valor"));
 				resultado = numero01*numero02;
-				document.write("la multiplicaci�n de",numero01,"X",numero02,"=",resultado,'<BR/>');
+				alert("la multiplicación de "+numero01+" X "+numero02+" = "+resultado);
 			} else {
 				if (opcion_num==4) {
-					document.write("Igresar el primer valor",'<BR/>');
-					numero01 = Number(prompt());
-					document.write("Ingresar el segundo valor",'<BR/>');
-					numero02 = Number(prompt());
+					numero01 = Number(prompt("Igresar el primer valor"));
+					numero02 = Number(prompt("Ingresar el segundo valor"));
 					resultado = numero01/numero02;
-					document.write("la divisi�n de",numero01,"/",numero02,"=",resultado,'<BR/>');
+					alert("la división de "+numero01+" / "+numero02+" = "+resultado,'<BR/>');
 				} else {
 				}
 			}
@@ -137,61 +125,57 @@ function sumapareseimpares() {
 		} else {
 			suma_impar = suma_impar+i;
 		}
+	i=i+1
 	}
-	alert("La suma de los primeros 100 n�meros pares es...",'<BR/>');
+	alert("La suma de los primeros 100 números pares es...",'<BR/>');
 	alert(suma_par,'<BR/>');
-	alert("La suma de los primeros 100 n�meros impares es...",'<BR/>');
+	alert("La suma de los primeros 100 números impares es...",'<BR/>');
 	alert(suma_impar,'<BR/>');
 }
 
 function tablamultiplicar() {
 	var contador01, numero01;
-	numero01 = prompt(Ingresar un número para generar su tabla de multipicar);
-	for (contador01=1;contador01<=10;contador01++) {
-		alert(numero01,"x",contador01,"=",(numero01*contador01),'<BR/>');
+	numero01 = Number(prompt("Ingresar un número para generar su tabla de multipicar"));
+	for (contador01 = 1;contador01 <= 10;contador01 ++) {
+		alert(numero01+" x "+contador01+" = "+(numero01 * contador01));
 	}
 }
 
 function salariosemanal() {
 	var base, horas, salario;
-	document.write("Ingresarel n�mero de horas trabajadas en la semana...",'<BR/>');
-	horas = Number(prompt());
-	document.write("Ingresar el salario base por hora...",'<BR/>');
-	base = Number(prompt());
+	horas = Number(prompt("Ingresarel número de horas trabajadas en la semana..."));
+	base = Number(prompt("Ingresar el salario base por hora..."));
 	salario = horas*base;
-	document.write("El salario semanal ser� de: ",salario,"pesos",'<BR/>');
-	horas = Number(prompt());
+	alert(salario);
+
 }
 
 function jubilacion() {
 	var aportacion, edad, persona, sexo;
 	persona = 1;
 	do {
-		document.write("Datos de persona...",persona,'<BR/>');
-		document.write("�Cu�ntos a�os lleva aportando (N�mero entero)?",'<BR/>');
-		aportacion = prompt();
-		document.write("�Qu� edad tiene actualmente (N�mero entero)?",'<BR/>');
-		edad = prompt();
-		document.write("�es mujer u hombre(M=Mujer, H=Hombre)?",'<BR/>');
-		sexo = prompt();
+		persona = Number(prompt("Datos de persona...",persona,));
+		aportacion = Number(prompt("¿Cuántos años lleva aportando (Número entero)?"));
+		edad = Number(prompt("¿Qué edad tiene actualmente (Número entero)?"));
+		sexo = Number(prompt("¿Es mujer u hombre(M=Mujer, H=Hombre)?"));
 		if (aportacion>20) {
 			if (sexo=="M" || sexo=="m") {
 				if (edad>60) {
-					document.write("Si tiene derecho a la jubilaci�n",'<BR/>');
+					alert("Si tiene derecho a la jubilación",'<BR/>');
 				} else {
-					document.write("No tiene derecho a la jubilaci�n",'<BR/>');
+					alert("No tiene derecho a la jubilación",'<BR/>');
 				}
 			} else {
 				if (edad<65) {
-					document.write("Si tiene derecho a la jubilaci�n",'<BR/>');
+					alert("Si tiene derecho a la jubilación",'<BR/>');
 				} else {
-					document.write("No tiene derecho a la jubilaci�n",'<BR/>');
+					alert("No tiene derecho a la jubilación",'<BR/>');
 				}
 			}
 		} else {
-			document.write("No tiene derecho a la jubilaci�n",'<BR/>');
+			alert("No tiene derecho a la jubilación",'<BR/>');
 		}
-		document.write("Siguiente consulta",'<BR/>');
+		alert("Siguiente consulta",'<BR/>');
 		persona = persona+1;
 	} while (persona!==11);
 }
